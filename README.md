@@ -31,8 +31,10 @@ npm test
 The landing page lives in `app/page.tsx`, global presentation is in
 `app/globals.css`, and brand assets are in `public/`.
 
-## Deploying to Netlify
+## Deployment
 
-Import this GitHub repository as a new Netlify site. Netlify will detect the
-Next.js application automatically; use `npm run build` and leave the publish
-directory at its detected default.
+Pushes to `main` are automatically built and published to GitHub Pages by the
+workflow in `.github/workflows/deploy-pages.yml`. The Next.js application is
+exported as static HTML, CSS, and JavaScript in `out/`.
+
+Configure a custom domain from the repository's **Settings → Pages** screen.
